@@ -3,12 +3,12 @@ import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
+import { getAllBlogWithSlug, getBlog } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Blog({ post, preview }) {
   const router = useRouter();
 
   if (!router.isFallback && !post?.slug) {
@@ -29,10 +29,6 @@ export default function Post({ post, morePosts, preview }) {
               {/* <meta property="og:image" content={post.ogImage.url} /> */}
             </Head>
 
-            <header>
-              <h4>pocketprojects.io</h4>
-            </header>
-
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
@@ -48,19 +44,20 @@ export default function Post({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview);
+  const data = await getBlog(params.slug, preview);
+
   return {
     props: {
       preview,
-      post: data?.post || null,
-      morePosts: data?.morePosts || null,
+      post: data || null,
     },
     revalidate: 1,
   };
 }
 
 export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug();
+  const allPosts = await getAllBlogWithSlug();
+
   return {
     paths:
       allPosts?.map((post) => ({

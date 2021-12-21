@@ -1,17 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 
 @import "./reset";
-
-// /* purgecss start ignore */
-// @tailwind base;
-// @tailwind components;
-// article a {
-//     color: rgb(49, 49, 182);
-//     text-decoration: underline;
-// }
-// /* purgecss end ignore */
-// @tailwind utilities;
 
 body {
   background-color: #282c35;
@@ -22,7 +12,7 @@ body {
   padding-top: 3rem;
 }
 
-.container {
+body {
   margin-left: auto;
   margin-right: auto;
   max-width: 42rem;
@@ -30,49 +20,67 @@ body {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav h1,
+nav h3 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 1rem;
 }
 
 section {
   margin-bottom: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #98c7c1;
-  position: relative;
   font-family: "Francois One", sans-serif;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -10px;
-  //   left: 0;
-  //   height: 5px;
-  //   width: 20%;
-  //   background-color: #f2f2f2;
-  // }
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  color: #98c7c1;
-  position: relative;
-  font-family: "Francois One", sans-serif;
 }
 
 h3 {
   font-size: 1.25rem;
-  color: #98c7c1;
-  position: relative;
-  font-family: "Francois One", sans-serif;
 }
 
 h4 {
   font-size: 1rem;
-  color: #98c7c1;
-  position: relative;
-  font-family: "Francois One", sans-serif;
 }
 
 p {
@@ -80,7 +88,7 @@ p {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 ul,
@@ -103,8 +111,13 @@ time {
 
 a {
   color: #98c7c1;
+  cursor: pointer;
 }
 
 img {
   margin-bottom: 2rem;
+}
+
+em {
+  font-style: italic;
 }
