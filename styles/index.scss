@@ -1,130 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+@import "./reset";
 
 // /* purgecss start ignore */
 // @tailwind base;
@@ -136,10 +13,9 @@ table {
 // /* purgecss end ignore */
 // @tailwind utilities;
 
-html,
-main {
+body {
   background-color: #282c35;
-  color: #ffffff;
+  color: #f2f2f2;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
@@ -153,33 +29,82 @@ main {
   padding: 0rem 2rem;
 }
 
+header {
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
 h1 {
   font-size: 2rem;
   color: #98c7c1;
   position: relative;
-  margin-bottom: 3rem;
-  padding-bottom: 5px;
   font-family: "Francois One", sans-serif;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 5px;
-    width: 20%;
-    background-color: #ffffff;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: -10px;
+  //   left: 0;
+  //   height: 5px;
+  //   width: 20%;
+  //   background-color: #f2f2f2;
+  // }
 }
 
 h2 {
   font-size: 1.5rem;
   color: #98c7c1;
   position: relative;
-  margin-bottom: 1rem;
+  font-family: "Francois One", sans-serif;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #98c7c1;
+  position: relative;
+  font-family: "Francois One", sans-serif;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #98c7c1;
+  position: relative;
   font-family: "Francois One", sans-serif;
 }
 
 p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul,
+ol {
+  list-style: circle;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+}
+
+time {
+  font-size: 0.75rem;
+}
+
+a {
+  color: #98c7c1;
+}
+
+img {
   margin-bottom: 2rem;
 }
