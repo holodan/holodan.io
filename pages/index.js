@@ -17,39 +17,46 @@ export default function Index({ allPosts, preview }) {
 
         <p>
           Hi, my name is Dan. I'm a developer, artist, and business owner from
-          Manchester, UK. For the past few years I've been slowly gaining
-          momentum with these ventures, but like many people, I feel as though I
-          could be pushing my skills further. I've always been facinated by
-          creating & building new things, but I've found where I fall short is
-          keeping up momentum and following through on new ideas.
+          Manchester, UK. For the past few years, I've been having fun trying
+          out new dev projects, working on music, and building a magazine. I've
+          always been facinated by creating & building new things, but like many
+          people, I've found difficulty in keeping up momentum and following
+          through on new ideas.
         </p>
 
         <p>
-          I like the idea of creating small, managble projects that I can
-          continously grow along side my main hussles. Whether it's starting a
-          brand, learning a new skill, reading a new book, this website will
-          serve as a home for these concepts & ideas, and I'll be actively
-          documenting my journey in growing these from the ground up.
+          Frankly, I'd like to push my skillset further. I like the idea of
+          creating small, managable projects that I can continously grow along
+          side my main hussles. Whether it's starting a new business, learning a
+          new skill, reading a new book, this website will serve as a home for
+          these concepts & ideas, I'll be actively documenting my journey in
+          doing that from the ground up.
         </p>
 
-        <p>
-          I recently read Steven Pressfield's <em>The War Of Art</em> in which
-          he outlines our everyday battle with resistance. If you're looking for
-          a kick up the #@!$, then I highly reccomend checking it out.
-        </p>
+        {
+          // <p>
+          //   I'll list these in the{" "}
+          //   <Link as={`/projects`} href="/projects">
+          //     <a>Projects</a>
+          //   </Link>{" "}
+          //   page and routinely update{" "}
+          //   <Link as={`/blog`} href="/blog">
+          //     <a>Weekly Blog</a>
+          //   </Link>{" "}
+          //   to talk about my progress.
+          // </p>
+        }
       </section>
 
-      <p>
-        <strong>Projects:</strong>
-      </p>
+      <hr />
 
       {allPosts.map((post) => (
         <ul>
           <li>
             <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-              <h3>
+              <h2>
                 <a aria-label={post.title}>{post.title}</a>
-              </h3>
+              </h2>
             </Link>
 
             <Date dateString={post.date} />

@@ -12,10 +12,6 @@ export default function Blog({ allPosts, preview }) {
         <title>pocketprojects.io</title>
       </Head>
 
-      <p>
-        <strong>Blog:</strong>
-      </p>
-
       {allPosts.map((post) => (
         <ul>
           <li>
