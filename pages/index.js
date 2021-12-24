@@ -8,10 +8,6 @@ import { CMS_NAME } from "../lib/constants";
 export default function Index({ allPosts, preview }) {
   return (
     <Layout preview={preview}>
-      <Head>
-        <title>pocketprojects.io</title>
-      </Head>
-
       <section>
         <p>🙋‍♂️🙋‍♂️🙋‍♂️</p>
 

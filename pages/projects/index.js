@@ -8,10 +8,6 @@ import { CMS_NAME } from "../../lib/constants";
 export default function Projects({ allPosts, preview }) {
   return (
     <Layout preview={preview}>
-      <Head>
-        <title>pocketprojects.io</title>
-      </Head>
-
       {allPosts.map((post) => (
         <ul>
           <li>
