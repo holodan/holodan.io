@@ -49,7 +49,7 @@ export default function Index({ allPosts, preview }) {
       {allPosts.map((post) => (
         <ul>
           <li>
-            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+            <Link as={`/projects/${post.slug}`} href="/projects/[slug]">
               <h2>
                 <a aria-label={post.title}>{post.title}</a>
               </h2>

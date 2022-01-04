@@ -4,13 +4,13 @@ export default {
   type: "document",
   fields: [
     {
-      name: "name",
+      name: "title",
       title: "Project Name",
       type: "string",
     },
     {
-      name: "title",
-      title: "Title",
+      name: "seoTitle",
+      title: "SEO Title",
       type: "string",
     },
     {
@@ -18,7 +18,7 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: "projectName",
+        source: "title",
         maxLength: 96,
       },
     },
