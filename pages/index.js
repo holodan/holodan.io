@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Date from "../components/date";
 import Layout from "../components/layout";
+import SubscribeForm from "../components/subscribe-form";
 import { getAllProjects } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
@@ -11,23 +12,27 @@ export default function Index({ allPosts, preview }) {
       <section>
         <p>🙋‍♂️🙋‍♂️🙋‍♂️</p>
 
-        <p>
-          Hi, my name is Dan. I'm a developer, artist, and business owner from
-          Manchester, UK. For the past few years, I've been having fun trying
-          out new dev projects, working on music, and building a magazine. I've
-          always been facinated by creating & building new things, but like many
-          people, I've found difficulty in keeping up momentum and following
-          through on new ideas.
-        </p>
+        <p>My name's Dan. I'm from Manchester, and I make things.</p>
 
-        <p>
-          Frankly, I'd like to push my skillset further. I like the idea of
-          creating small, managable projects that I can continously grow along
-          side my main hussles. Whether it's starting a new business, learning a
-          new skill, reading a new book, this website will serve as a home for
-          these concepts & ideas, I'll be actively documenting my journey in
-          doing that from the ground up.
-        </p>
+        {
+          // <p>
+          //   Hi, my name is Dan. I'm a developer, artist, and business owner from
+          //   Manchester, UK. For the past few years, I've been having fun trying
+          //   out new dev projects, working on music, and building a magazine. I've
+          //   always been facinated by creating & building new things, but like many
+          //   people, I've found difficulty in keeping up momentum and following
+          //   through on new ideas.
+          // </p>
+          //
+          // <p>
+          //   Frankly, I'd like to push my skillset further. I like the idea of
+          //   creating small, managable projects that I can continously grow along
+          //   side my main hussles. Whether it's starting a new business, learning a
+          //   new skill, reading a new book, this website will serve as a home for
+          //   these concepts & ideas, I'll be actively documenting my journey in
+          //   doing that from the ground up.
+          // </p>
+        }
 
         {
           // <p>
@@ -44,8 +49,6 @@ export default function Index({ allPosts, preview }) {
         }
       </section>
 
-      <hr />
-
       {allPosts.map((post) => (
         <ul>
           <li>
@@ -59,6 +62,8 @@ export default function Index({ allPosts, preview }) {
           </li>
         </ul>
       ))}
+
+      <SubscribeForm />
     </Layout>
   );
 }

@@ -17,11 +17,13 @@ export default function Header() {
                 <a>Projects</a>
               </Link>
             </li>
-            <li>
-              <Link as={`/blog`} href="/blog">
-                <a>Weekly Blog</a>
-              </Link>
-            </li>
+            {
+              // <li>
+              //   <Link as={`/blog`} href="/blog">
+              //     <a>Weekly Blog</a>
+              //   </Link>
+              // </li>
+            }
           </ul>
         </nav>
       </header>

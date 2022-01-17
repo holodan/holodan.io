@@ -125,3 +125,36 @@ em {
 hr {
   margin-bottom: 2rem;
 }
+
+form {
+  input {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0;
+    outline: 0;
+    border-radius: 0;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #f2f2f2;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0;
+    outline: 0;
+    border-radius: 0;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #f2f2f2;
+  }
+}

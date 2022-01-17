@@ -3,6 +3,7 @@ import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
+import SubscribeForm from "../../components/subscribe-form";
 import { getAllProjectsWithSlug, getProject } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
@@ -37,6 +38,8 @@ export default function Project({ post, preview }) {
             />
             <PostBody content={post.body} />
           </article>
+
+          <SubscribeForm />
         </>
       )}
     </Layout>

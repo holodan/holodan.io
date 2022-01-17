@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
+import SubscribeForm from "../../components/subscribe-form";
 import { getAllProjects } from "../../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
@@ -21,6 +22,8 @@ export default function Projects({ allPosts, preview }) {
           </li>
         </ul>
       ))}
+
+      <SubscribeForm />
     </Layout>
   );
 }
