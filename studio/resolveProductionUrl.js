@@ -5,5 +5,5 @@ export default function resolveProductionUrl(document) {
   let page = document._type;
   let slug = document?.slug?.current || "null";
 
-  return `${process.env.SITE_URL}/api/preview?secret=${previewSecret}&page=${page}&slug=${slug}`;
+  return `https://holodan.io/api/preview?secret=${previewSecret}&page=${page}&slug=${slug}`;
 }
