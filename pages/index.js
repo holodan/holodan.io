@@ -8,11 +8,17 @@ import { CMS_NAME } from "../lib/constants";
 
 export default function Index({ allPosts, preview }) {
   return (
-    <Layout preview={preview}>
+    <Layout preview={preview} type="main">
       <section>
         <p>🙋‍♂️🙋‍♂️🙋‍♂️</p>
 
-        <p>My name's Dan. I'm from Manchester, and I make things.</p>
+        <p>
+          My name's Dan, and I make things. I've always been facinated by
+          creating & building new things, but like many people, I've found
+          difficulty in keeping up momentum and following through on new ideas.
+          This project serves to address this, existing as a repository of my
+          ongoing projects, learnings, and explorations:
+        </p>
 
         {
           // <p>

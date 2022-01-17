@@ -16,7 +16,7 @@ export default function Blog({ post, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout preview={preview} type="post">
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (

@@ -1,15 +1,23 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ type }) {
   return (
     <div className="container">
       <header>
         <nav>
-          <h1>
-            <Link as={`/`} href="/">
-              <a>holodan.io</a>
-            </Link>
-          </h1>
+          {type === "post" ? (
+            <span>
+              <Link as={`/`} href="/">
+                <a>holodan.io</a>
+              </Link>
+            </span>
+          ) : (
+            <h1>
+              <Link as={`/`} href="/">
+                <a>holodan.io</a>
+              </Link>
+            </h1>
+          )}
 
           <ul>
             <li>

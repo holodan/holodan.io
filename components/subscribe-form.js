@@ -62,9 +62,8 @@ export default function SubscribeForm() {
         <button>Sign Up</button>
 
         <br />
-        <br />
 
-        <p>{message}</p>
+        <small>{message}</small>
       </form>
     </>
   );

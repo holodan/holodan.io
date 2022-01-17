@@ -4,7 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Meta from "../components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ preview, type, children }) {
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ export default function Layout({ preview, children }) {
       </Head>
 
       <Meta />
-      <Header />
+      <Header type={type} />
       <main>{children}</main>
       <Footer />
     </>
