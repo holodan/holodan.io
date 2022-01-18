@@ -48,23 +48,32 @@ export default function SubscribeForm() {
       <br />
       <hr />
 
-      <p>Keep up with the journey!</p>
+      <p>
+        <a
+          target="_blank"
+          href="https://mailchi.mp/1d57495ebd80/subscribe-aagentah"
+        >
+          Keep up with the journey!
+        </a>
+      </p>
 
-      <form noValidate onSubmit={subscribe}>
-        <input
-          id="email-input"
-          name="email"
-          placeholder="Your email"
-          ref={inputEl}
-          type="email"
-        />
-
-        <button>Sign Up</button>
-
-        <br />
-
-        <small>{message}</small>
-      </form>
+      {
+        // <form noValidate onSubmit={subscribe}>
+        //   <input
+        //     id="email-input"
+        //     name="email"
+        //     placeholder="Your email"
+        //     ref={inputEl}
+        //     type="email"
+        //   />
+        //
+        //   <button>Sign Up</button>
+        //
+        //   <br />
+        //
+        //   <small>{message}</small>
+        // </form>
+      }
     </>
   );
 }
