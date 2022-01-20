@@ -46,6 +46,15 @@ nav ul li {
   padding-right: 1rem;
 }
 
+nav ul li svg {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li svg {
+  width: 20px;
+}
+
 section {
   margin-bottom: 2rem;
 }
