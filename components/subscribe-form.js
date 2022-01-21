@@ -46,6 +46,7 @@ export default function SubscribeForm() {
   return (
     <>
       <br />
+
       <hr />
 
       <p>Keep up with the journey!</p>
